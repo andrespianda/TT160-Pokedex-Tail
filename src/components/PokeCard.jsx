@@ -6,7 +6,7 @@ export default function PokeCard({ pokemon }) {
           {pokemon.id}
         </span>
         <img
-          className="w-full"
+          className="w-1/2 justify-self-center"
           src={pokemon.sprites.front_default}
           alt="Sunset in the mountains"
         />
@@ -19,11 +19,14 @@ export default function PokeCard({ pokemon }) {
           </p>
         </div>
         <div className="px-6 pt-4 pb-2">
+          <h3 className="text-red-900">Tipos</h3>
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             {pokemon.types.map((tipo) => {
-              return `${tipo.type.name} /`;
+              return tipo.type.name;
             })}
           </span>
+        </div>
+        <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             #travel
           </span>
