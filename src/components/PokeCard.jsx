@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function PokeCard({ pokemon }) {
   return (
     <>
-      <div className="max-w-sm rounded-4xl border border-red-900 overflow-hidden shadow-lg gap-2">
+    <Link to={"/POKE/" + pokemon.name}>
+     <div className="max-w-sm rounded-4xl border border-red-900 overflow-hidden shadow-lg gap-2">
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 ml-2 mt-2">
           {pokemon.id}
         </span>
@@ -35,6 +38,8 @@ export default function PokeCard({ pokemon }) {
           </span>
         </div>
       </div>
+    </Link>
+     
     </>
   );
 }
