@@ -32,7 +32,7 @@ export default function PokemonPage() {
         return (
             <div className='max-w-md mx-auto p-4 text-center'>
                 <h1 className='text-3xl font-bold capitalize mb-4'>{pokemon.name}</h1>
-                <button className="mt-6 bg-red-600 hover:bg-red-700" onClick={() => navigate(-1)}></button>
+                <button className="mt-6 bg-red-600 hover:bg-red-700 border rounded-sm px-3" onClick={() => navigate(-1)}> volver</button>
             </div>      
         )
     }

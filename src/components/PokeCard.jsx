@@ -9,9 +9,9 @@ export default function PokeCard({ pokemon }) {
           {pokemon.id}
         </span>
         <img
-          className="w-1/2 justify-self-center"
-          src={pokemon.sprites.front_default}
-          alt="Sunset in the mountains"
+          className="w-1/2  h-1/2 justify-self-center"
+          src={pokemon.sprites.other.showdown.front_default}
+          alt={pokemon.name}
         />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{pokemon.name}</div>
@@ -22,12 +22,12 @@ export default function PokeCard({ pokemon }) {
           </p>
         </div>
         <div className="px-6 pt-4 pb-2">
-          <h3 className="text-red-900">Tipos</h3>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            {pokemon.types.map((tipo) => {
-              return tipo.type.name;
-            })}
+          <h3 className="text-red-900 pb-2">Tipos</h3>
+            {pokemon.types.map((tipo,index) => 
+          <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              { tipo.type.name}
           </span>
+            )}
         </div>
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
